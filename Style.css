@@ -1,1 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;800;900&display=swap');
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:100vh;
+    background-image: url('back-imag.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 10px;
+   
+}
+.input-container{
+    display:flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.input-city{
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    width:70%;
+    outline: none;
+    border:none;
+    text-align: center;
+    font-size: 15px;
+}
+
+small{
+    padding:10px;
+    color: red;
+    font-weight: 800;
+}
+
+.small{
+    display: none;
+}
+
+.smart{ 
+    display: block;
+}
+
+.weather-info{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    margin-bottom:10px;
+    display: none;
+}
+
+.city-date-details{
+    margin:10px;
+    font-weight: 600;
+}
+
+.city-weather-details > div{
+    margin:10px;
+    font-weight: 600;
+}
+.temperature{
+    font-size: 30px;
+}
+
+.button{
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin: 5px;
+}
+img{
+    width:40%;
+    height:40%;
+}
+
+
+@media only screen and (max-width: 1024px){
+    
+    .container{
+        width: 35%;
+    }
+    .input-city{
+        padding: 10px;
+        margin:10px;
+        font-size: 15px;
+    }
+    .weather-info{
+        font-size: 15px;
+        margin-bottom:10px;
+    }
+
+    .city-date-details{
+        margin:10px;
+    }
+
+    .city-weather-details > div{
+        margin:10px;
+    }
+
+    .temperature{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    
+    .container{
+        width: 35%;
+    }
+    .input-city{
+        padding: 10px;
+        margin:10px;
+        font-size: 15px;
+    }
+    .weather-info{
+        font-size: 15px;
+        margin-bottom:10px;
+    }
+
+    .city-date-details{
+        margin:10px;
+    }
+
+    .city-weather-details > div{
+        margin:10px;
+    }
+
+    .temperature{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 850px){
+
+    .container{
+        width: 40%;
+    }
+    .input-city{
+        padding: 10px;
+        margin:10px;
+        font-size: 15px;
+    }
+    .weather-info{
+        font-size: 15px;
+        margin-bottom:10px;
+    }
+
+    .city-date-details{
+        margin:10px;
+    }
+
+    .city-weather-details > div{
+        margin:10px;
+    }
+
+    .temperature{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 750px){
+
+    .container{
+        width: 55%;
+    }
+    .input-city{
+        padding: 10px;
+        margin:10px;
+        font-size: 14px;
+    }
+    .weather-info{
+        font-size: 14px;
+        margin-bottom:10px;
+    }
+
+    .city-date-details{
+        margin:10px;
+    }
+
+    .city-weather-details > div{
+        margin:10px;
+    }
+
+    .temperature{
+        font-size: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 450px){
+
+    .container{
+        width: 75%;
+    }
+    .input-city{
+        padding: 10px;
+        margin:10px;
+        font-size: 14px;
+    }
+    .weather-info{
+        font-size: 14px;
+        margin-bottom:10px;
+    }
+
+    .city-date-details{
+        margin:10px;
+    }
+
+    .city-weather-details > div{
+        margin:10px;
+    }
+
+    .temperature{
+        font-size: 30px;
+    }
+}
