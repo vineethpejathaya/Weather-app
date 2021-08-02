@@ -20,7 +20,6 @@ Search_btn.addEventListener('click', function(e)
       {
             document.querySelector('small').className = "small";
             e.preventDefault();
-            console.log(input_city.value);
             fetch(`${weather.baseurl}q=${input_city.value}&appid=${weather.Key}`)
             .then(response => {return response.json()})
             .then(data =>  showWeatherInfo(data)    
@@ -34,13 +33,43 @@ Search_btn.addEventListener('click', function(e)
 });
 
  function showWeatherInfo(data)
-{
-     console.log(data);
+{    
+     
      city.innerHTML=`${data.name}, ${data.sys.country}`;
-     date.innerHTML=``
+     const todayDate= new Date();
+     date.innerHTML= dateManage(todayDate);
      temp.innerHTML=`${Math.round(data.main.temp-(273.15))}&degC`;
-     minMaxTemp.innerHTML=`${Math.floor(data.main.temp_min -(273.15))}&degC (Min)/${Math.ceil(data.main.temp_max-(273.15))}&degC (Max)`;
+     minMaxTemp.innerHTML=`${Math.floor(data.main.temp_min -(273.15))}&degC (Min) / ${Math.ceil(data.main.temp_max-(273.15))}&degC (Max)`;
      weatherStatus.innerHTML=`${data.weather[0].main}`;
-     console.log(data.weather[0].icon);
      statusIcon.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
+     if(data.weather[0].main ==='Clouds')
+     {
+           document.body.style.backgroundImage='url("Images/cloudy.jpeg")';
+     }
+     else if (data.weather[0].main ==='Rain')
+     {
+           document.body.style.backgroundImage='url("Images/image.jpg")';
+     }
+     else if (data.weather[0].main ==='Haze')
+     {
+           document.body.style.backgroundImage='url("Images/haze.png")';
+     }
+     else if (data.weather[0].main ==='Clear')
+     {
+           document.body.style.backgroundImage='url("Images/clear_sky.jpg")';
+     }
+     else if (data.weather[0].main ==='Thunderstorm')
+     {
+           document.body.style.backgroundImage='url("Images/thunderstorm.webp")';
+     }
+}
+
+function dateManage(todayDate){
+  let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  let months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  let year = todayDate.getFullYear();
+  let date = todayDate.getDate();
+  let day = days[todayDate.getDay()];
+  let month = months[todayDate.getMonth()];
+   return `${date} &nbsp ${month},&nbsp (${day}), &nbsp ${year}`;
 }

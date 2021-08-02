@@ -13,7 +13,7 @@ body{
     align-items: center;
     width: 100vw;
     height:100vh;
-    background-image: url('back-imag.jpeg');
+    background-image: url('Images/back_image1.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -68,7 +68,7 @@ small{
     align-items: center;
     text-align: center;
     font-size: 15px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.9);
     border-radius: 10px;
     margin-bottom:10px;
     display: none;
