@@ -34,7 +34,7 @@ Search_btn.addEventListener('click', function(e)
 
  function showWeatherInfo(data)
 {    
-     
+     console.log(data);
      city.innerHTML=`${data.name}, ${data.sys.country}`;
      const todayDate= new Date();
      date.innerHTML= dateManage(todayDate);
@@ -44,23 +44,31 @@ Search_btn.addEventListener('click', function(e)
      statusIcon.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
      if(data.weather[0].main ==='Clouds')
      {
-           document.body.style.backgroundImage='url("Images/cloudy.jpeg")';
+           document.body.style.backgroundImage='url("Images/cloudy.jpg")';
      }
      else if (data.weather[0].main ==='Rain')
      {
-           document.body.style.backgroundImage='url("Images/image.jpg")';
+           document.body.style.backgroundImage='url("Images/rain.jpg")';
      }
      else if (data.weather[0].main ==='Haze')
      {
-           document.body.style.backgroundImage='url("Images/haze.png")';
+           document.body.style.backgroundImage='url("Images/haze.jpg")';
      }
      else if (data.weather[0].main ==='Clear')
      {
-           document.body.style.backgroundImage='url("Images/clear_sky.jpg")';
+           document.body.style.backgroundImage='url("Images/Sunny2.jpg")';
      }
      else if (data.weather[0].main ==='Thunderstorm')
      {
-           document.body.style.backgroundImage='url("Images/thunderstorm.webp")';
+           document.body.style.backgroundImage='url("Images/thunderstorm.jpg")';
+     }
+     else if (data.weather[0].main ==='Drizzle')
+     {
+           document.body.style.backgroundImage='url("Images/rain.jpg")';
+     }
+     else if (data.weather[0].main ==='Snow')
+     {
+           document.body.style.backgroundImage='url("Images/snow.jpg")';
      }
 }
 
