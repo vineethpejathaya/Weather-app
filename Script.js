@@ -14,6 +14,10 @@ let temp = document.querySelector('.temperature');
 let minMaxTemp = document.querySelector('.min-max-temp');
 let weatherStatus = document.querySelector('.weather-status');
 let statusIcon = document.querySelector('.weather-icon');
+let pressure = document.querySelector('.pressureData');
+let humidity = document.querySelector('.humidityData');
+
+console.log(statusIcon);
 Search_btn.addEventListener('click', function(e)
 {
       if(input_city.value !=='')
@@ -39,9 +43,12 @@ Search_btn.addEventListener('click', function(e)
      const todayDate= new Date();
      date.innerHTML= dateManage(todayDate);
      temp.innerHTML=`${Math.round(data.main.temp-(273.15))}&degC`;
-     minMaxTemp.innerHTML=`${Math.floor(data.main.temp_min -(273.15))}&degC (Min) / ${Math.ceil(data.main.temp_max-(273.15))}&degC (Max)`;
+     minMaxTemp.innerHTML=`<i class="fas fa-temperature-low"></i>&nbsp ${Math.floor(data.main.temp_min -(273.15))}&degC (Min) &nbsp  / &nbsp  <i class="fas fa-temperature-high"></i>&nbsp  ${Math.ceil(data.main.temp_max-(273.15))}&degC (Max)`;
      weatherStatus.innerHTML=`${data.weather[0].main}`;
      statusIcon.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
+     pressure.innerHTML=`${data.main.pressure} mbar`;
+     humidity.innerHTML=`${data.main.humidity} %`;
+     
      if(data.weather[0].main ==='Clouds')
      {
            document.body.style.backgroundImage='url("Images/cloudy.jpg")';

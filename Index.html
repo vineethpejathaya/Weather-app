@@ -12,31 +12,59 @@
 <link rel="icon" type="image/png" sizes="16x16" href="Weather_logo_2/favicon-16x16.png">
 <link rel="manifest" href="Weather_logo_2/site.webmanifest">
 
-    
+<!-- Style sheet for fonts-->
+<link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css"/>
+
 <!-- Style sheet for body-->
 <link rel="stylesheet" href="Style.css"/>
 
 <body>
    
     <div class="container">
+
         <div class="input-container">
               <input type="text" id="input-city" class="input-city" placeholder="Enter City Name..">
               <button class="button">Search</button>  
         </div>
+
         <small class="small">It's a required field</small>
+
         <div class="weather-info">
+
             <div class="city-date-details">
                 <div class="city" id="city"></div>
                 <div class="date"></div>
             </div>
+
             <div class="city-weather-details">
-                 <div class="temperature">33&deg;C</div>
-                 <div class="min-max-temp">25&deg;C(min)/35&deg;C(max)</div>
-                 <div class="weather-status">Cloudy</div>
-                 <div class="status-icon">
-                     <img class="weather-icon" src="" alt="Weather icon">
-                 </div>
+                 <div class="temperature"></div>
+                 <div class="min-max-temp"></div>      
             </div>
+
+            <div class="weather-statusIcon">
+                <div class="weather-status">Cloudy</div>
+                <div class="status-icon">
+                    <img class="weather-icon" src="" alt="Weather icon">
+                </div>
+            </div>
+
+            <div class="weather-humidityPressure">
+
+                <div class="pressure">
+                    <div class="weather-pressure"><i class="fas fa-tachometer-alt"></i> Pressure</div> 
+                    <div class="pressureData"></div>
+                </div>
+
+                <div class="humidity">
+                   <div class="weather-humidity"><i class="fas fa-tint"> Humidity</i></div>
+                   <div class="humidityData"></div>
+                </div>
+
+            </div>
+            <div class="sunRise-set-details">
+                  <div></div> 
+            </div>
+
         </div>
 
     </div>

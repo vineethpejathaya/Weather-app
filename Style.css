@@ -25,7 +25,7 @@ body{
     width: 30%;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(0,0,0,0.6);
     border-radius: 10px;
    
 }
@@ -46,6 +46,17 @@ body{
     font-size: 15px;
 }
 
+.button{
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin: 5px;
+}
+
 small{
     padding:10px;
     color: red;
@@ -61,52 +72,91 @@ small{
 }
 
 .weather-info{
-    color: black;
+    color: white;
     display: flex;
     flex-direction: column;
     width:90%;
     align-items: center;
     text-align: center;
     font-size: 15px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    margin-bottom:10px;
     display: none;
 }
 
 .city-date-details{
-    margin:10px;
+    margin-bottom: 5px;
     font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    border: 1px solid black;
+    padding:15px;
 }
 
-.city-weather-details > div{
-    margin:10px;
+.city-weather-details {
+    margin-bottom: 5px;
     font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 100%;
+    border: 1px solid black;
+    padding:15px;
 }
 .temperature{
     font-size: 30px;
 }
 
-.button{
-    padding: 10px;
-    border-radius: 10px;
-    outline: none;
-    background-color: black;
-    color: white;
-    font-size: 15px;
-    text-align: center;
-    margin: 5px;
+.weather-statusIcon{
+    display: flex;
+    flex-direction: column;
+    width:70%;
+    align-items: center;
+    text-align: center;  
+    color: white; 
+    font-weight: 900;
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding:15px;
 }
 .status-icon{
-   
-    
+   width:100%;
 }
-img{
-    width:40%;
-    height:40%;
-    background-color: #9c99a0;
+
+
+.weather-icon{
+    width:30%;
     border-radius: 10px;
 }
+
+.weather-humidityPressure{
+    display: flex;
+    width:100%;
+    justify-content: space-evenly;
+    color: white;      
+}
+
+.weather-humidityPressure .pressure , .weather-humidityPressure .humidity{
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.weather-humidityPressure .pressure{
+    border-right: 1px solid black;
+    padding-right: 15px;
+}
+.weather-pressure{
+    color:yellowgreen;
+}
+.weather-humidity{
+    color:rgb(8, 10, 146);
+}
+
 
 
 @media only screen and (max-width: 1024px){
